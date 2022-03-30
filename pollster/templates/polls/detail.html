@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<a class="btn btn-secondary btn-sm mb-3" href="{% url 'polls:index' %}">Back To Polls</a>
-<h1 class="text-center mb-3">{{ question.question_text }}</h1>
+<body style="background-color: #ecd59f;">
+<a class="btn btn-lightbtn-sm mb-3" style="background-color: #d3e7f0; color: #7097a8" href="{% url 'polls:index' %}">Back To Polls</a>
+<h1 class="text-center mb-3" style="color: #7097a8">{{ question.question_text }}</h1>
 
 {% if error_message %}
 <p class="alert alert-danger">
@@ -12,7 +13,7 @@
 <form action="{% url 'polls:vote' question.id %}" method="post">
 	{% csrf_token %} 
 	{% for choice in question.choice_set.all %}
-		<div class="form-check">
+		<div class="form-check" style="color: #7097a8">
 			<input
 				type="radio"
 				name="choice"
@@ -24,6 +25,7 @@
 			>
 		</div>
 	{% endfor %}
-	<input type="submit" value="Vote" class="btn btn-success btn-lg btn-block mt-4" />
+	<input type="submit" value="Vote" class="btn btn-light btn-lg btn-block mt-4" style="background-color: #d3e7f0; color: #7097a8"/>
 </form>
+</body>
 {% endblock %}
