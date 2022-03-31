@@ -9,6 +9,8 @@ verify_ssl = true
 asgiref = "==3.5.0"
 sqlparse = "==0.4.2"
 Django = "==3.2.9"
+postgres = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"
