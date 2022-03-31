@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'pollster.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+ALLOWED_HOSTS = ['.herokuapp.com']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
