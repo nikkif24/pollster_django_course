@@ -6,7 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
+asgiref = "==3.5.0"
+sqlparse = "==0.4.2"
+Django = "==3.2.9"
 
 [requires]
 python_version = "3.7"
