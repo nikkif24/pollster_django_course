@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: gunicorn pollster.pollsgter.wsgi
+  web: gunicorn pollster.pollster.wsgi
