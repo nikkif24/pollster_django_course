@@ -12,10 +12,10 @@ services:
       sh -c "python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     environment:
-      - DB_HOST=db
-      - DB_NAME=pollster
-      - DB_USER=postgres
-      - DB_PASS=supersecretpassword
+      - DB_HOST=ec2-44-194-92-192.compute-1.amazonaws.com
+      - DB_NAME=dm5skudinoo6r
+      - DB_USER=jamhhsfkjqmbpi
+      - DB_PASS=e0fc066815a23ccc34b0b9850419dd8b7fe587f132b25cf29fda4a48dabea911
     depends_on:
       - db
   db:
