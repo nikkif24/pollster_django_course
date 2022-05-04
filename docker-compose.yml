@@ -7,14 +7,15 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./pollster
+      - ./pollster/pollster
     command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
     environment:
       - DB_HOST=db
       - DB_NAME=pollster
       - DB_USER=postgres
-      - DB_PASS=secretpassword
+      - DB_PASS=supersecretpassword
     depends_on:
       - db
   db:
@@ -22,4 +23,4 @@ services:
     environment:
       - POSTGRES_DB=pollster
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=secretpassword
+      - POSTGRES_PASSWORD=supersecretpassword

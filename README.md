@@ -11,7 +11,7 @@ pipenv install
 cd pollster
 
 # Serve on localhost:8000
-python manage.py runserver
+python pollster/manage.py runserver
 ```
 
 ### Commands Gist
