@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: gunicorn pollster.pollster.wsgi
+  web: bundle exec puma -C config/puma.rb   
