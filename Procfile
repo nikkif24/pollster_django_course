@@ -1,2 +1,1 @@
-release: python manage.py migrate
-web: gunicorn pollster.wsgi --log-file -
+web: python manage.py runserver --noreload
